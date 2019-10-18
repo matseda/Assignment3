@@ -1,0 +1,47 @@
+[comment encoding = UTF-8 /]
+[module department2TextGenerator('platform:/plugin/TDT4250.Assignment3.model/model/study.ecore', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+
+[template public department2TextGenerator(department : Department)]
+[comment @main/]
+[file ('generatedDepartmentHtml.html', false, 'UTF-8')]
+	<html>
+	<head>
+		<title>[department.name/]</title>
+		<meta charset="utf-8"/>
+	</head>	
+	<body>
+	[for(programme : Programme | department.programs)]
+		[showProgramme(programme)/]		
+	[/for]
+	</body>
+	</html>		
+[/file]
+[/template]
+
+[template public showProgramme(programme : Programme)]
+	<h1>[programme.name/]</h1>
+	[for(specialization : Specialization | programme.specializations)]
+		[showSpecialization(specialization)/]
+	[/for]
+[/template]
+
+[template public showSpecialization(specialization : Specialization)]
+	<h2>[specialization.name/]</h2>
+	[for(semester : Semester | specialization.semesters)]
+		[showSemester(semester)/]
+	[/for]
+[/template]
+
+[template public showSemester(semester : Semester)]
+	<h3>[semester.Season/], year [semester.year/] <h3>
+	<ul>
+	[for(course : SemesterCourse | semester.courses)]
+		<li>[showSemesterCourse(course)/]</li>
+	[/for]
+	</ul>
+[/template]
+
+[template public showSemesterCourse(course : SemesterCourse)]
+	<p style="color:blue"><b>[course.course.code/] - [course.course.name/]</b>  [course.mandatory/]</p>
+[/template]

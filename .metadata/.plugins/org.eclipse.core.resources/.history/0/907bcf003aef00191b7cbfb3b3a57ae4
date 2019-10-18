@@ -1,0 +1,19 @@
+[comment encoding = UTF-8 /]
+[module department2TextGenerator('platform:/plugin/TDT4250.Assignments.study', 'http://www.eclipse.org/emf/2002/Ecore')/]
+
+
+[template public department2TextGenerator(department : Department)]
+[comment @main/]
+[file ('test.html', false, 'UTF-8')]
+	<html>
+	<head>
+		<title>[department.name/]</title>
+
+		<meta charset="utf-8"/>
+	</head>	
+	<body>
+	<h1>HEI!</h1>
+	</body>
+	</html>		
+[/file]
+[/template]
