@@ -1,5 +1,6 @@
 ## Changes from Assignment 1
-Added "Season" Enum to represent if a semester is in the fall or the spring.
+* Added "Season" Enum to represent if a semester is in the fall or the spring.
+* Added "IsMandatory" Enum to represent if a course is mandatory in a semester.
 
 # Structure 
 This section will describe the structure of the project and the most important content for this assignment, the headers in this section will refer to the folders in the repo.
@@ -28,6 +29,3 @@ This folder containes the generated model code made using the study.genmodel fil
 There are two constraint in this model
 * Semester (OCL): A semester cannot have more than 30 credits in total in mandatory courses. 
 * Course (Java): A course cannot have less than 5.0 credits
-
-# PlantUML Diagram
-![PlantUML Diagram](https://github.com/matseda/TDT4250Assignment/blob/master/Assignment1v2.png)
