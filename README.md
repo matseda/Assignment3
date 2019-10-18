@@ -1,4 +1,4 @@
-# TDT4250.Assignment3
+# TDT4250 Assignment3
 
 ## Run the transformation
 This assignment uses Acceleo, to run the transformation do the following: 
